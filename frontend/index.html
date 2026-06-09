@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Bite - Delicious Food Delivered</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div href="#" class="logo">
+                <span class="logo-icon">🍴</span>
+                <span class="logo-text">Quick Bite</span>
+            </div>
+            <div class="nav-links">
+                <a href="#menu-section" class="nav-link active">Menu</a>
+                <a href="#cart-section" class="nav-link">
+                    Cart <span class="cart-badge" id="cart-count">0</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Main Content -->
+    <main class="main-container">
+        <!-- Menu Section -->
+        <section id="menu-section" class="menu-section">
+            <div class="section-header">
+                <h2 class="section-title">Our Popular Menu</h2>
+                <p class="section-subtitle">Explore our delicious collection of handpicked meals</p>
+            </div>
+            <div id="menu-container" class="menu-grid">
+                <!-- Menu items will be dynamically loaded here -->
+            </div>
+        </section>
+
+        <!-- Cart Section -->
+        <aside id="cart-section" class="cart-section">
+            <div class="cart-header">
+                <h2 class="cart-title">
+                    <span class="cart-icon">🛒</span>
+                    Your Order
+                </h2>
+            </div>
+            
+            <div class="cart-body">
+                <ul id="cart-items" class="cart-items">
+                    <li class="empty-cart">
+                        <div class="empty-cart-icon">🍽️</div>
+                        <p>Your cart is empty</p>
+                        <small>Add items from the menu</small>
+                    </li>
+                </ul>
+                
+                <div class="cart-summary">
+                    <div class="summary-row">
+                        <span>Subtotal</span>
+                        <span id="cart-subtotal">₹0.00</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Delivery Fee</span>
+                        <span class="delivery-fee">₹40.00</span>
+                    </div>
+                    <div class="summary-divider"></div>
+                    <div class="summary-row total-row">
+                        <span>Total</span>
+                        <span class="total-amount">₹<span id="cart-total">0.00</span></span>
+                    </div>
+                </div>
+
+                <div class="order-form">
+                    <div class="form-group">
+                        <label for="customer-name">Your Name</label>
+                        <input 
+                            type="text" 
+                            id="customer-name" 
+                            placeholder="Enter your full name" 
+                            required
+                        >
+                    </div>
+                    <button id="place-order-btn" class="order-btn">
+                        <span class="btn-text">Place Order</span>
+                        <span class="btn-icon">→</span>
+                    </button>
+                </div>
+                
+                <div id="order-status" class="order-status"></div>
+            </div>
+        </aside>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3 class="footer-logo">🍴 Quick Bite</h3>
+                <p class="footer-desc">Delivering happiness, one meal at a time</p>
+            </div>
+            <div class="footer-section">
+                <p class="footer-copy">&copy; 2025 Quick Bite. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
